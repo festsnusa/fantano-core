@@ -1,0 +1,63 @@
+mixin createCard(data)
+  .main__card
+    each value in data
+      img.main__card__img(src= value["src"] alt= value["name"])
+      //- .main__overlay
+      .plus
+      p.main__card__description= value["name"]
+      .detail
+        .detail__close
+        img.detail__image
+
+
+link(rel="stylesheet" href="./main.css")
+
+.main
+  .main__header
+    a.logo(href="#") 
+      img.main__header__logo(src="./assets/images/fantano-logo.png" alt="#")
+  .main__container
+    .main__content.main__classics
+    p.main__content__text 10
+    .main__content.main__tens
+      +createCard([{"name": 'Death Grips — The Money Store', "src": "./assets/images/tens/death grips.jpg"}])
+      +createCard([{"name": 'Swans — To Be Kind', "src": "./assets/images/tens/swans.png"}])
+      +createCard([{"name": 'Kendrick Lamar — To Pimp A Butterfly', "src": "./assets/images/tens/kendrick.jpg"}])
+      +createCard([{"name": 'Kids See Ghosts — Kids See Ghosts', "src": "./assets/images/tens/ksg.jpg"}])
+      +createCard([{"name":"Daughters — You Won't Get What You Want", "src": "./assets/images/tens/daughtersjpg.jpg"}])
+      +createCard([{"name":'Spellling — The Turning Wheel', "src": "./assets/images/tens/spellling.jpg"}])
+      +createCard([{"name":'Lingua Ignota — Sinner Get Ready', "src": "./assets/images/tens/lingua.jpg"}])
+      +createCard([{"name":'Madvillain — Madvillainy', "src": "./assets/images/tens/madvillainy.jpg"}])
+      +createCard([{"name":'System of a Down — Toxicity', "src": "./assets/images/tens/SOAD.jpg"}])
+      +createCard([{"name":'Björk — Vespertine', "src": "./assets/images/tens/bjork.jpg"}])
+      +createCard([{"name":'Daft Punk — Discovery', "src": "./assets/images/tens/daftpunk.jpg"}])
+      +createCard([{"name":'Godspeed You! Black Emperor — Lift Your Skinny Fists Like Antennas to Heaven', "src": "./assets/images/tens/gsy.jpg"}])
+      +createCard([{"name":'Lauryn Hill — The Miseducation of Lauryn Hill', "src": "./assets/images/tens/laurenhyll.jpg"}])
+      +createCard([{"name":'Neutral Milk Hotel — In the Aeroplane Over the Sea', "src": "./assets/images/tens/neutral.jpg"}])
+      +createCard([{"name":'Wu-Tang Clan — Enter The Wu-Tang (36 Chambers)', "src": "./assets/images/tens/wu-tang.jpg"}])
+      +createCard([{"name":'Nirvana — Nevermind', "src": "./assets/images/tens/nirvana.jpg"}])
+      +createCard([{"name":'Depeche Mode — Violator', "src": "./assets/images/tens/depechemode.jpg"}])
+      +createCard([{"name":'Public Enemy — It Takes a Nation of Millions to Hold Us Back', "src": "./assets/images/tens/publicenemt.jpg"}])
+      +createCard([{"name":'Metallica — Master of Puppets', "src": "./assets/images/tens/metallica.jpg"}])
+      +createCard([{"name":'Kate Bush — Hounds of Love', "src": "./assets/images/tens/katebush.jpg"}])
+      +createCard([{"name":'Prince & The Revolution — Purple Rain', "src": "./assets/images/tens/prince.jpg"}])
+      +createCard([{"name":'Talking Heads — Remain in Light', "src": "./assets/images/tens/talkingheads.jpg"}])
+      +createCard([{"name":'The Clash — London Calling', "src": "./assets/images/tens/theclash.png"}])
+      +createCard([{"name":'Television — Marquee Moon', "src": "./assets/images/tens/television.jpg"}])
+      +createCard([{"name":'Led Zeppelin — Physical Graffiti', "src": "./assets/images/tens/led-zeppelin-physical-graffiti-artwork.jpg"}])
+      +createCard([{"name":"Marvin Gaye — What's Going On", "src": "./assets/images/tens/marvingaye.jpg"}])
+      +createCard([{"name":'Miles Davis — Bitches Brew', "src": "./assets/images/tens/miles.jpg"}])
+    .main__nines 
+    .main__eights 
+    .main__sevens 
+    .main__sixes 
+    .main__fives 
+    .main__fours 
+    .main__threes 
+    .main__twos 
+    .main__ones 
+    .main__zeros 
+    .main__notgood
+  .main__footer
+
+script(src="./main.js")

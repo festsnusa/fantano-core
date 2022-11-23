@@ -1,0 +1,231 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(31, 32, 65, 0.25);
+  opacity: 1;
+  /* Firefox */
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(31, 32, 65, 0.25);
+  opacity: 1;
+  /* Firefox */
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(31, 32, 65, 0.25);
+  opacity: 1;
+  /* Firefox */
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(31, 32, 65, 0.25);
+  opacity: 1;
+  /* Firefox */
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.bold {
+  font-family: "Montserrat Bold", sans-serif;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../../assets/fonts/Montserrat-Regular.ttf") format("ttf"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff"), url("../../assets/fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("../../assets/fonts/Montserrat-Bold.ttf") format("ttf"), url("../../assets/fonts/Montserrat-Bold.woff") format("woff"), url("../../assets/fonts/Montserrat-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: #F0EAD6;
+}
+
+.main__header__logo {
+  border-radius: 50%;
+  max-width: 4rem;
+}
+
+.main__content {
+  padding: 0 2rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 110rem;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.main__content__text {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.main__card {
+  max-width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__card__img {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main__card__img:hover {
+  -webkit-filter: brightness(40%);
+  filter: brightness(40%);
+}
+
+.main__card__img:hover + .plus {
+  opacity: 1;
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+}
+
+.main .plus {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  bottom: 32%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  background: red;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  pointer-events: none;
+}
+
+.main .plus:before {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 2px;
+  top: 24px;
+  left: 18px;
+  background: #fff;
+}
+
+.main .plus:after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 14px;
+  top: 18px;
+  left: 24px;
+  background: #fff;
+}
+
+.detail {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  font-size: 0;
+}
+
+.detail.active {
+  pointer-events: all;
+  display: block;
+}
+
+.detail__close {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 25%;
+  background: red;
+  border-radius: 50%;
+  -webkit-transition: background .3s ease-in-out, -webkit-transform .5s ease-in;
+  transition: background .3s ease-in-out, -webkit-transform .5s ease-in;
+  transition: background .3s ease-in-out, transform .5s ease-in;
+  transition: background .3s ease-in-out, transform .5s ease-in, -webkit-transform .5s ease-in;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.detail__close:before {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 2px;
+  top: 24px;
+  left: 18px;
+  background: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.detail__close:after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 14px;
+  top: 18px;
+  left: 24px;
+  background: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.detail__close:hover {
+  background: #fff;
+}
+
+.detail__close:hover:after, .detail__close:hover:before {
+  background: red;
+}
+
+.detail__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */
